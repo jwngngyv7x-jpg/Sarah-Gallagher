@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Requirement 15, 28, 36: Descriptive Title & Meta -->
     <title>Holistic Herbs | Organic Natural Remedies & Wellness Education</title>
     <meta name="description" content="Discover premium organic herbal remedies at Holistic Herbs. Join our community for natural healing tips and high-quality botanical products.">
-    
-    <!-- Requirement 56: Single external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Requirement 13, 14: Skip to Content for Keyboard Users -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
         <div class="logo-container">
-            <!-- Requirement 49: Logo links to home -->
             <a href="index.html" class="logo" aria-label="Holistic Herbs Home">🌿 Holistic Herbs</a>
         </div>
-        <!-- Requirement 16, 31, 44, 45: Consistent, intuitive navigation -->
         <nav aria-label="Main Navigation">
             <ul class="nav-menu">
                 <li><a href="index.html" class="active" aria-current="page">Home</a></li>
@@ -33,34 +27,31 @@
     </header>
 
     <main id="main-content">
-        <!-- Requirement 28, 60: Main information clear on load -->
         <section class="hero">
             <h1>Organic Natural Remedies for Modern Healing</h1>
             <p>Your journey to holistic wellness starts with pure, laboratory-tested organic herbs.</p>
-            <!-- Requirement 32, 50: Clear Call to Action -->
             <a href="shop.html" class="cta-button">Browse Our Shop</a>
         </section>
 
-        <!-- Requirement 25, 30: Images with Keywords in Alt Text -->
+        <!-- GALLERY: Updated with real web links to ensure they show up -->
         <section class="gallery">
             <h2>Our Signature Organic Blends</h2>
             <div class="image-grid">
                 <figure>
-                    <img src="lavender.jpg" alt="Dried organic lavender bunches for natural relaxation remedies">
+                    <img src="https://unsplash.com" alt="Dried organic lavender bunches for natural relaxation remedies">
                     <figcaption>Calming Lavender</figcaption>
                 </figure>
                 <figure>
-                    <img src="herbal-tea.jpg" alt="Selection of green herbal teas rich in antioxidants">
+                    <img src="https://unsplash.com" alt="Selection of green herbal teas rich in antioxidants">
                     <figcaption>Antioxidant Teas</figcaption>
                 </figure>
                 <figure>
-                    <img src="peppermint.jpg" alt="Fresh peppermint leaves being crushed for essential oils">
+                    <img src="https://unsplash.com" alt="Fresh peppermint leaves being crushed for essential oils">
                     <figcaption>Fresh Peppermint</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- Requirement 29, 37: Logically grouped content with H2 -->
         <section class="info-table">
             <h2>Herbal Remedy Comparison Chart</h2>
             <table>
@@ -86,18 +77,39 @@
             </table>
         </section>
 
-        <!-- Requirement 12: Embed with title and no autoplay -->
+        <!-- ADDED: Herbal Preparation Guide with Visual Aid & Like Button -->
+        <section class="prep-guide">
+            <h2>Step-by-Step Preparation Guide</h2>
+            <div class="guide-container">
+                <figure class="guide-visual">
+                    <img src="https://unsplash.com" alt="Hot water being poured into a glass teapot with fresh herbs">
+                    <figcaption>Visual Guide: The Art of the Herbal Infusion</figcaption>
+                </figure>
+                <div class="guide-text">
+                    <h3>How to Brew a Medicinal Tea</h3>
+                    <ol>
+                        <li>Use 1-2 teaspoons of dried organic herbs.</li>
+                        <li>Pour 8oz of near-boiling water over the herbs.</li>
+                        <li>Cover the cup to keep the medicinal oils inside.</li>
+                        <li>Steep for 10 minutes, strain, and enjoy.</li>
+                    </ol>
+                    <div class="like-container">
+                        <button id="likeBtn" class="like-button" aria-label="Like this guide">❤️ Like this Guide</button>
+                        <span id="likeCount">0</span> People liked this
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="embed-section">
-            <h2>Herbal Preparation Guide</h2>
+            <h2>Herbal Video Tutorials</h2>
             <div class="video-container">
                 <iframe src="https://youtube.com" title="How to brew herbal tea correctly" allowfullscreen></iframe>
             </div>
         </section>
 
-        <!-- Requirement 52, 53: Validated Form -->
         <section class="contact-form-section">
             <h2>Join Our Wellness Newsletter</h2>
-            <p>Get organic healing tips delivered weekly.</p>
             <form id="newsletterForm">
                 <div class="form-group">
                     <label for="full-name">Full Name:</label>
@@ -108,14 +120,12 @@
                     <input type="email" id="email-address" name="email" required>
                 </div>
                 <button type="submit" class="submit-btn">Subscribe Now</button>
-                <!-- Requirement 53: Message area for JS confirmation -->
                 <div id="formFeedback" role="alert" aria-live="polite"></div>
             </form>
         </section>
     </main>
 
     <footer>
-        <!-- Requirement 26, 43, 58: Useful footer with social icons and external links -->
         <div class="footer-grid">
             <div class="footer-links">
                 <h3>Resources</h3>
@@ -135,4 +145,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 

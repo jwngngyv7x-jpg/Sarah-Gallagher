@@ -1,4 +1,3 @@
-/* Requirement 2, 59: Legible font size and limited set */
 :root {
     --primary-green: #2d5a27;
     --text-color: #333;
@@ -19,7 +18,7 @@ body {
     outline-offset: 2px;
 }
 
-/* Requirement 4, 5: Color Contrast (Dark green on white is > 4.5:1) */
+/* Requirement 4, 5: Color Contrast */
 h1, h2, h3 {
     color: var(--primary-green);
     line-height: 1.2;
@@ -33,7 +32,44 @@ a {
     text-decoration: underline;
 }
 
-/* Requirement 48: Mobile-friendly layout */
+/* --- Image Gallery & Grid Styles --- */
+.image-grid {
+    display: grid;
+    /* Requirement 48: Mobile-friendly grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.image-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 250px; /* Ensures uniform height across the row */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-grid figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+/* Preparation Guide Image */
+.guide-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Navigation & Layout --- */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -47,7 +83,7 @@ a {
     }
 }
 
-/* Requirement 10: Decorative styling */
+/* Requirement 10: Accessibility styling */
 .skip-link {
     position: absolute;
     left: -10000px;
@@ -72,3 +108,4 @@ a {
     cursor: pointer;
     font-weight: bold;
 }
+

@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holistic Herbs | Organic Natural Remedies</title>
-    <meta name="description" content="Holistic Herbs provides high-quality organic remedies and herbal education.">
-    <!-- Link to external CSS -->
+    <!-- Requirement 15, 28, 36: Descriptive Title & Meta -->
+    <title>Holistic Herbs | Organic Natural Remedies & Wellness Education</title>
+    <meta name="description" content="Discover premium organic herbal remedies at Holistic Herbs. Join our community for natural healing tips and high-quality botanical products.">
+    
+    <!-- Requirement 56: Single external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation (Consistent across all pages) -->
+    <!-- Requirement 13, 14: Skip to Content for Keyboard Users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
         <div class="logo-container">
-            <a href="index.html" class="logo">🌿 Holistic Herbs</a>
+            <!-- Requirement 49: Logo links to home -->
+            <a href="index.html" class="logo" aria-label="Holistic Herbs Home">🌿 Holistic Herbs</a>
         </div>
+        <!-- Requirement 16, 31, 44, 45: Consistent, intuitive navigation -->
         <nav aria-label="Main Navigation">
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="benefits.html">Benefits</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -27,39 +33,49 @@
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Requirement 28, 60: Main information clear on load -->
         <section class="hero">
-            <h1>Natural Healing for a Modern World</h1>
-            <p>Your journey to holistic wellness starts with pure, organic herbs.</p>
-            <a href="shop.html" class="cta-button">Browse Shop</a>
+            <h1>Organic Natural Remedies for Modern Healing</h1>
+            <p>Your journey to holistic wellness starts with pure, laboratory-tested organic herbs.</p>
+            <!-- Requirement 32, 50: Clear Call to Action -->
+            <a href="shop.html" class="cta-button">Browse Our Shop</a>
         </section>
 
-        <!-- Image Gallery (Requirement: 4 images total) -->
+        <!-- Requirement 25, 30: Images with Keywords in Alt Text -->
         <section class="gallery">
-            <h2>Our Signature Blends</h2>
+            <h2>Our Signature Organic Blends</h2>
             <div class="image-grid">
-                <img src="https://unsplash.com" alt="Dried lavender bunches on a wooden table">
-                <img src="https://unsplash.com" alt="Selection of green herbal teas in ceramic cups">
-                <img src="https://unsplash.com" alt="Mortar and pestle crushing fresh peppermint leaves">
+                <figure>
+                    <img src="lavender.jpg" alt="Dried organic lavender bunches for natural relaxation remedies">
+                    <figcaption>Calming Lavender</figcaption>
+                </figure>
+                <figure>
+                    <img src="herbal-tea.jpg" alt="Selection of green herbal teas rich in antioxidants">
+                    <figcaption>Antioxidant Teas</figcaption>
+                </figure>
+                <figure>
+                    <img src="peppermint.jpg" alt="Fresh peppermint leaves being crushed for essential oils">
+                    <figcaption>Fresh Peppermint</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- HTML Table (Requirement: At least one table) -->
+        <!-- Requirement 29, 37: Logically grouped content with H2 -->
         <section class="info-table">
-            <h2>Herbal Comparison Chart</h2>
+            <h2>Herbal Remedy Comparison Chart</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Herb Name</th>
-                        <th>Primary Benefit</th>
-                        <th>Usage</th>
+                        <th scope="col">Herb Name</th>
+                        <th scope="col">Primary Benefit</th>
+                        <th scope="col">Common Usage</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Chamomile</td>
-                        <td>Relaxation</td>
-                        <td>Tea/Infusion</td>
+                        <td>Stress Relief</td>
+                        <td>Evening Tea</td>
                     </tr>
                     <tr>
                         <td>Echinacea</td>
@@ -70,192 +86,53 @@
             </table>
         </section>
 
-        <!-- HTML List (Requirement: At least one list) -->
-        <section class="list-section">
-            <h2>Why Choose Organic?</h2>
-            <ul>
-                <li>No synthetic pesticides or fertilizers</li>
-                <li>Higher nutrient density</li>
-                <li>Environmentally sustainable farming</li>
-            </ul>
-        </section>
-
-        <!-- Canva Embed (From your original code) -->
+        <!-- Requirement 12: Embed with title and no autoplay -->
         <section class="embed-section">
-            <h2>Visual Guide</h2>
-            <div class="embed-container">
-                <iframe loading="lazy" src="https://canva.com" allowfullscreen></iframe>
+            <h2>Herbal Preparation Guide</h2>
+            <div class="video-container">
+                <iframe src="https://youtube.com" title="How to brew herbal tea correctly" allowfullscreen></iframe>
             </div>
         </section>
 
-        <!-- HTML Form (Requirement: One form w/ script processing) -->
+        <!-- Requirement 52, 53: Validated Form -->
         <section class="contact-form-section">
-            <h2>Newsletter Signup</h2>
-            <form id="contactForm">
+            <h2>Join Our Wellness Newsletter</h2>
+            <p>Get organic healing tips delivered weekly.</p>
+            <form id="newsletterForm">
                 <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="name" required minlength="2">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email-address">Email Address:</label>
+                    <input type="email" id="email-address" name="email" required>
                 </div>
-                <button type="submit" class="submit-btn">Join Now</button>
-                <p id="formFeedback" class="hidden"></p>
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+                <!-- Requirement 53: Message area for JS confirmation -->
+                <div id="formFeedback" role="alert" aria-live="polite"></div>
             </form>
         </section>
     </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="https://google.com">External Resource 1</a> | 
-            <a href="https://wikipedia.org">External Resource 2</a> | 
-            <a href="https://w3schools.com">External Resource 3</a>
+        <!-- Requirement 26, 43, 58: Useful footer with social icons and external links -->
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="https://herbalgram.org" target="_blank" rel="noopener">American Botanical Council</a>
+                <a href="https://nih.gov" target="_blank" rel="noopener">Health Information (NIH)</a>
+                <a href="https://w3.org" target="_blank" rel="noopener">Web Standards (W3C)</a>
+            </div>
+            <div class="social-icons">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Visit our Facebook page">FB</a>
+                <a href="#" aria-label="Visit our Instagram page">IG</a>
+            </div>
         </div>
-        <p>&copy; 2024 Holistic Herbs. Designed for Wellness.</p>
+        <p>&copy; 2024 Holistic Herbs. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
-    <!-- Link to external JS -->
     <script src="script.js"></script>
 </body>
 </html>
 
-
-// Function to handle the form processing (Requirement: Form w/ script)
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent page reload
-            
-            const name = document.getElementById('name').value;
-            
-            // Success Message (Audit requirement)
-            feedback.textContent = `Thank you, ${name}! Your request has been sent successfully.`;
-            feedback.classList.remove('hidden');
-            feedback.style.color = "green";
-            feedback.style.fontWeight = "bold";
-            
-            contactForm.reset();
-        });
-    }
-});
-
-
-/* --- ACCESSIBILITY & SEO BASICS --- */
-:root {
-    --primary-green: #2d5a27;
-    --text-dark: #333333;
-    --bg-light: #fdfdfd;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px; /* Requirement: 18px ideal */
-    line-height: 1.6; /* Requirement: 1.5+ spacing */
-    color: var(--text-dark);
-    background-color: var(--bg-light);
-    margin: 0;
-}
-
-/* Header & Nav */
-header {
-    background-color: var(--primary-green);
-    color: white;
-    padding: 1rem 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.nav-menu a:hover, .nav-menu a.active {
-    text-decoration: underline;
-    color: #a4d49d;
-}
-
-/* Sections */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 { font-size: 2.5rem; color: var(--primary-green); }
-h2 { font-size: 1.8rem; border-bottom: 2px solid var(--primary-green); padding-bottom: 5px; }
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
-}
-
-th { background-color: #f2f2f2; }
-
-/* Responsive Image Grid */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-/* Canva Embed Container */
-.embed-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin: 20px 0;
-}
-
-.embed-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Form Styling */
-.form-group { margin-bottom: 15px; }
-label { display: block; margin-bottom: 5px; font-weight: bold; }
-input { width: 100%; padding: 10px; font-size: 16px; }
-.submit-btn {
-    background-color: var(--primary-green);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    header { flex-direction: column; text-align: center; }
-    .nav-menu { padding: 0; flex-direction: column; gap: 10px; }
-}
-
-.hidden { display: none; }
